@@ -1,0 +1,45 @@
+﻿<Window x:Class="NMBP1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NMBP1"
+        xmlns:views="clr-namespace:NMBP1.Views"
+        mc:Ignorable="d"
+        Title="Advanced Databases" Height="950" Width="1200"
+        Closing="Window_Closing">
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Text search in RDB and advanced SQL" TextWrapping="Wrap" Width="711" FontSize="40" FontWeight="Bold" Height="52" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" Background="LightGray">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="MENU" FontWeight="Black" FontSize="35" Margin="0,60,0,50"></TextBlock>
+                <Button Name="Badd" Content="Add" Height="40" FontSize="25" FontWeight="Bold" Click="Add_clicked"/>
+                <Button Name="Bsearch" Content="Search" Height="40" FontSize="25" FontWeight="Bold" Click="Search_clicked"/>
+                <Button Name="Bstats" Content="Stats" Height="40" FontSize="25" FontWeight="Bold" Click="Stats_clicked"/>
+
+            </StackPanel>
+        </DockPanel>
+
+        <ContentControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="5" Content="{Binding}"></ContentControl>
+
+    </Grid>
+</Window>
